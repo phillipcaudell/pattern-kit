@@ -8,25 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		13911C011C15A3D90035820C /* PatternKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C001C15A3D90035820C /* PatternKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		13911C4D1C15A6A60035820C /* PKItemProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C3A1C15A6A60035820C /* PKItemProtocol.h */; };
-		13911C4E1C15A6A60035820C /* PKSectionProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C3B1C15A6A60035820C /* PKSectionProtocol.h */; };
-		13911C4F1C15A6A60035820C /* PKItemViewPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C3C1C15A6A60035820C /* PKItemViewPattern.h */; };
+		13911C4D1C15A6A60035820C /* PKItemProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C3A1C15A6A60035820C /* PKItemProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13911C4E1C15A6A60035820C /* PKSectionProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C3B1C15A6A60035820C /* PKSectionProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13911C4F1C15A6A60035820C /* PKItemViewPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C3C1C15A6A60035820C /* PKItemViewPattern.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13911C501C15A6A60035820C /* PKItemViewPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = 13911C3D1C15A6A60035820C /* PKItemViewPattern.m */; };
-		13911C511C15A6A60035820C /* PKItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C3E1C15A6A60035820C /* PKItem.h */; };
+		13911C511C15A6A60035820C /* PKItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C3E1C15A6A60035820C /* PKItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13911C521C15A6A60035820C /* PKItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 13911C3F1C15A6A60035820C /* PKItem.m */; };
-		13911C531C15A6A60035820C /* PKSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C401C15A6A60035820C /* PKSection.h */; };
+		13911C531C15A6A60035820C /* PKSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C401C15A6A60035820C /* PKSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13911C541C15A6A60035820C /* PKSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 13911C411C15A6A60035820C /* PKSection.m */; };
-		13911C551C15A6A60035820C /* PKTableItemProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C421C15A6A60035820C /* PKTableItemProtocol.h */; };
-		13911C561C15A6A60035820C /* PKTableSectionProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C431C15A6A60035820C /* PKTableSectionProtocol.h */; };
-		13911C571C15A6A60035820C /* PKTableViewPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C441C15A6A60035820C /* PKTableViewPattern.h */; };
+		13911C551C15A6A60035820C /* PKTableItemProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C421C15A6A60035820C /* PKTableItemProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13911C561C15A6A60035820C /* PKTableSectionProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C431C15A6A60035820C /* PKTableSectionProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13911C571C15A6A60035820C /* PKTableViewPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C441C15A6A60035820C /* PKTableViewPattern.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13911C581C15A6A60035820C /* PKTableViewPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = 13911C451C15A6A60035820C /* PKTableViewPattern.m */; };
-		13911C591C15A6A60035820C /* PKTableSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C461C15A6A60035820C /* PKTableSection.h */; };
+		13911C591C15A6A60035820C /* PKTableSection.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C461C15A6A60035820C /* PKTableSection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13911C5A1C15A6A60035820C /* PKTableSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 13911C471C15A6A60035820C /* PKTableSection.m */; };
-		13911C5B1C15A6A60035820C /* PKTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C481C15A6A60035820C /* PKTableViewCell.h */; };
+		13911C5B1C15A6A60035820C /* PKTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C481C15A6A60035820C /* PKTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13911C5C1C15A6A60035820C /* PKTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13911C491C15A6A60035820C /* PKTableViewCell.m */; };
-		13911C5D1C15A6A60035820C /* PKCollectionViewPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C4A1C15A6A60035820C /* PKCollectionViewPattern.h */; };
+		13911C5D1C15A6A60035820C /* PKCollectionViewPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C4A1C15A6A60035820C /* PKCollectionViewPattern.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13911C5E1C15A6A60035820C /* PKCollectionViewPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = 13911C4B1C15A6A60035820C /* PKCollectionViewPattern.m */; };
-		13911C5F1C15A6A60035820C /* PKInteraction.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C4C1C15A6A60035820C /* PKInteraction.h */; };
+		13911C5F1C15A6A60035820C /* PKInteraction.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C4C1C15A6A60035820C /* PKInteraction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13AC599E1C15A72000696EA9 /* PKInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AC599D1C15A72000696EA9 /* PKInteraction.m */; };
 /* End PBXBuildFile section */
 

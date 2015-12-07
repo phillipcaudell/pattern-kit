@@ -62,7 +62,7 @@
         
     } else {
         
-        return CGSizeMake(5, 5);
+        return CGSizeMake(44, 44);
     }
 }
 
