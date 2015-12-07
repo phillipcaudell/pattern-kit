@@ -368,6 +368,7 @@
 				13911C2A1C15A48E0035820C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
