@@ -43,13 +43,8 @@
     
     PKItem *concreateItem = [PKItem itemWithTitle:@"Concreate PKItem" subtitle:@"For basic UITableViewCell representation, you can simply use PKItem to represent a title, subtitle, and image." image:nil];
     
-    PKTableItem *accessoryTableItem = [PKTableItem tableItemWithTitle:@"Lols"];
-    accessoryTableItem.subtitle = @"Update subtitle here too";
-    accessoryTableItem.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
     
-    NSLog(@"ACCESS: %@", accessoryTableItem);
-    
-    PKSection *introSection = [PKTableSection tableSectionWithHeaderTitle:@"Basic Usage" items:@[introItem, concreateItem, accessoryTableItem] footerTitle:nil interactionHandler:nil];
+    PKSection *introSection = [PKTableSection tableSectionWithHeaderTitle:@"Basic Usage" items:@[introItem, concreateItem] footerTitle:nil interactionHandler:nil];
     
     /*
      * Interactions
@@ -63,13 +58,26 @@
     
     PKItem *interactiveSectionItem = [PKItem itemWithTitle:@"Interactive Section"];
     
-    PKTableSection *interactiveSection = [PKTableSection tableSectionWithHeaderTitle:@"Interactive" items:@[interactiveItem, interactiveSectionItem] footerTitle:nil interactionHandler:^(PKInteraction *interaction) {
+    PKTableItem *accessoryTableItem = [PKTableItem tableItemWithTitle:@"Interactive Accessory" subtitle:@"I have an accessory with an interaction." image:nil];
+    accessoryTableItem.accessoryType = UITableViewCellAccessoryDetailButton;
+    
+    [accessoryTableItem setInteractionHandler:^(PKInteraction *interaction) {
+        
+        if (interaction.type == PKInteractionTypePrimary) {
+            NSLog(@"I'm the interaction for selecting the whole cell");
+        }
+        
+        if (interaction.type == PKInteractionTypeSecondary) {
+            NSLog(@"I'm the secondary interaction, the one for the accessory view.");
+        }
+    }];
+    
+    PKTableSection *interactiveSection = [PKTableSection tableSectionWithHeaderTitle:@"Interactive" items:@[interactiveItem, interactiveSectionItem, accessoryTableItem] footerTitle:nil interactionHandler:^(PKInteraction *interaction) {
         
         NSLog(@"I'm the interaction handler for the section, which is applied to all items without an interaction handler. My indexPath is: %@", interaction.indexPath);
     }];
     
     self.tableViewPattern.sections = @[introSection, interactiveSection];
-    
 }
 
 @end
