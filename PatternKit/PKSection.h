@@ -16,5 +16,6 @@
 @property (nonatomic, assign) PKInteractionHandler interactionHandler;
 
 + (instancetype)sectionWithItems:(NSArray *)items;
+- (void)setInteractionHandler:(PKInteractionHandler)interactionHandler;
 
 @end

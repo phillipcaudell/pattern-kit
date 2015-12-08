@@ -23,4 +23,9 @@
     return self.items;
 }
 
+- (PKInteractionHandler)sectionInteractionHandler
+{
+    return self.interactionHandler;
+}
+
 @end

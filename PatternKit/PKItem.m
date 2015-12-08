@@ -10,12 +10,12 @@
 
 @implementation PKItem
 
-+ (instancetype)rowWithTitle:(NSString *)title
++ (instancetype)itemWithTitle:(NSString *)title
 {
-    return [PKItem rowWithTitle:title subtitle:nil image:nil];
+    return [PKItem itemWithTitle:title subtitle:nil image:nil];
 }
 
-+ (instancetype)rowWithTitle:(NSString *)title subtitle:(NSString *)subtitle image:(UIImage *)image
++ (instancetype)itemWithTitle:(NSString *)title subtitle:(NSString *)subtitle image:(UIImage *)image
 {
     PKItem *item = [PKItem new];
     item.title = title;
@@ -38,6 +38,11 @@
 - (UIImage *)itemImage
 {
     return self.image;
+}
+
+- (PKInteractionHandler)itemInteractionHandler
+{
+    return self.interactionHandler;
 }
 
 @end

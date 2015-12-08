@@ -14,8 +14,10 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *subtitle;
 @property (nonatomic, strong) UIImage *image;
+@property (nonatomic, strong) PKInteractionHandler interactionHandler;
 
-+ (instancetype)rowWithTitle:(NSString *)title;
-+ (instancetype)rowWithTitle:(NSString *)title subtitle:(NSString *)subtitle image:(UIImage *)image;
++ (instancetype)itemWithTitle:(NSString *)title;
++ (instancetype)itemWithTitle:(NSString *)title subtitle:(NSString *)subtitle image:(UIImage *)image;
+- (void)setInteractionHandler:(PKInteractionHandler)interactionHandler;
 
 @end

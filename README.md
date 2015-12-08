@@ -18,9 +18,7 @@ Provides a flow for a user to select an image from their camera or library.
 
 ## Getting Started
 - Download the project and have a play with the Demo app.
-- Include the PatternKit project in your workspace.
-- Add libPatternKit to your build phases.
-- Add header search paths.
+- Embed the PatternKit.framework binary into your project.
 - Import "PatternKit.h" where appropriate.
 
 ## Contributing 

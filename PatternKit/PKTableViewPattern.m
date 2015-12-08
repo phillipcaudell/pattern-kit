@@ -118,6 +118,40 @@
     }
 }
 
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    id <PKTableItemProtocol> item = (id <PKTableItemProtocol>)[self rowAtIndexPath:indexPath];
+    id <PKTableSectionProtocol> section = (id <PKTableSectionProtocol>)[self sectionAtIndex:indexPath.section];
+
+    PKInteractionHandler interactionHandler = nil;
+    
+    if ([section respondsToSelector:@selector(sectionInteractionHandler)]) {
+        interactionHandler = [section sectionInteractionHandler];
+    }
+    
+    if ([item respondsToSelector:@selector(itemInteractionHandler)]) {
+        
+        if ([item itemInteractionHandler]) {
+            interactionHandler = [item itemInteractionHandler];
+        }
+    }
+    
+    if (interactionHandler) {
+        
+        PKInteraction *interaction = [PKInteraction new];
+        interaction.indexPath = indexPath;
+        interaction.item = item;
+        
+        interactionHandler(interaction);
+        
+    } else {
+        
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
+}
+
 #pragma mark - Helpers
 
 - (CGFloat)automaticCellHeightForIndexPath:(NSIndexPath *)indexPath

@@ -22,10 +22,20 @@
 
     self.tableViewPattern = [[PKTableViewPattern alloc] initWithTableView:self.tableView];
     
-    PKItem *tableViewItem = [PKItem rowWithTitle:@"Table View" subtitle:nil image:nil];
-    PKItem *collectionViewItem = [PKItem rowWithTitle:@"Collection View"];
+    PKItem *tableViewItem = [PKItem itemWithTitle:@"Table View" subtitle:nil image:nil];
+    [tableViewItem setInteractionHandler:^(PKInteraction *interaction) {
+        
+        NSLog(@"Item interaction handler! %@", interaction);
+    }];
+    
+    PKItem *collectionViewItem = [PKItem itemWithTitle:@"Collection View"];
     
     PKTableSection *patternSection = [PKTableSection tableSectionWithHeaderTitle:@"Patterns" items:@[tableViewItem, collectionViewItem] footerTitle:nil interactionHandler:nil];
+    
+//    [patternSection setInteractionHandler:^(PKInteraction *interaction) {
+//        
+//        NSLog(@"Section interaction handler!");
+//    }];
     
     self.tableViewPattern.sections = @[patternSection];
 }
