@@ -15,6 +15,7 @@
 		13911C311C15A4AD0035820C /* PatternKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13911C301C15A49F0035820C /* PatternKit.framework */; };
 		13911C321C15A4AD0035820C /* PatternKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 13911C301C15A49F0035820C /* PatternKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		13AC59A21C16E14600696EA9 /* DemoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AC59A11C16E14600696EA9 /* DemoTableViewController.m */; };
+		13AC59AA1C16EF2200696EA9 /* UglyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AC59A91C16EF2200696EA9 /* UglyTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		13911C2B1C15A49F0035820C /* PatternKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = PatternKit.xcodeproj; path = ../PatternKit.xcodeproj; sourceTree = "<group>"; };
 		13AC59A01C16E14600696EA9 /* DemoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTableViewController.h; sourceTree = "<group>"; };
 		13AC59A11C16E14600696EA9 /* DemoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTableViewController.m; sourceTree = "<group>"; };
+		13AC59A81C16EF2200696EA9 /* UglyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UglyTableViewCell.h; sourceTree = "<group>"; };
+		13AC59A91C16EF2200696EA9 /* UglyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UglyTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +102,7 @@
 				13911C181C15A48E0035820C /* AppDelegate.m */,
 				13911C1A1C15A48E0035820C /* RootViewController.h */,
 				13911C1B1C15A48E0035820C /* RootViewController.m */,
-				13AC59A01C16E14600696EA9 /* DemoTableViewController.h */,
-				13AC59A11C16E14600696EA9 /* DemoTableViewController.m */,
+				13AC59A71C16EE7400696EA9 /* Table View */,
 				13911C201C15A48E0035820C /* Assets.xcassets */,
 				13911C221C15A48E0035820C /* LaunchScreen.storyboard */,
 				13911C251C15A48E0035820C /* Info.plist */,
@@ -123,6 +125,17 @@
 				13911C301C15A49F0035820C /* PatternKit.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		13AC59A71C16EE7400696EA9 /* Table View */ = {
+			isa = PBXGroup;
+			children = (
+				13AC59A01C16E14600696EA9 /* DemoTableViewController.h */,
+				13AC59A11C16E14600696EA9 /* DemoTableViewController.m */,
+				13AC59A81C16EF2200696EA9 /* UglyTableViewCell.h */,
+				13AC59A91C16EF2200696EA9 /* UglyTableViewCell.m */,
+			);
+			name = "Table View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13AC59AA1C16EF2200696EA9 /* UglyTableViewCell.m in Sources */,
 				13AC59A21C16E14600696EA9 /* DemoTableViewController.m in Sources */,
 				13911C1C1C15A48E0035820C /* RootViewController.m in Sources */,
 				13911C191C15A48E0035820C /* AppDelegate.m in Sources */,

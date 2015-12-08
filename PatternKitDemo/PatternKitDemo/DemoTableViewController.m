@@ -7,6 +7,7 @@
 //
 
 #import "DemoTableViewController.h"
+#import "UglyTableViewCell.h"
 
 @import PatternKit;
 
@@ -41,7 +42,7 @@
     
     PKItem *introItem = [PKItem itemWithTitle:@"This is a table item." subtitle:@"A table item is a representation of a table cell." image:nil];
     
-    PKItem *concreateItem = [PKItem itemWithTitle:@"Concreate PKItem" subtitle:@"For basic UITableViewCell representation, you can simply use PKItem to represent a title, subtitle, and image." image:nil];
+    PKItem *concreateItem = [PKItem itemWithTitle:@"Concreate PKItem" subtitle:@"For basic UITableViewCell representation, you can simply use PKItem to represent a title, subtitle, and image. Table view cell heights are automatically calcuclated." image:[UIImage imageNamed:@"demo-table-icon"]];
     
     
     PKSection *introSection = [PKTableSection tableSectionWithHeaderTitle:@"Basic Usage" items:@[introItem, concreateItem] footerTitle:nil interactionHandler:nil];
@@ -77,7 +78,16 @@
         NSLog(@"I'm the interaction handler for the section, which is applied to all items without an interaction handler. My indexPath is: %@", interaction.indexPath);
     }];
     
-    self.tableViewPattern.sections = @[introSection, interactiveSection];
+    /*
+     * Custom Cells
+     */
+    
+    UglyTableItem *customItem = [UglyTableItem new];
+    customItem.title = @"My cell is custom and has a tasteful colour scheme.";
+    
+    PKTableSection *customSection = [PKTableSection tableSectionWithHeaderTitle:@"Custom" items:@[customItem] footerTitle:nil interactionHandler:nil];
+    
+    self.tableViewPattern.sections = @[introSection, interactiveSection, customSection];
 }
 
 @end
