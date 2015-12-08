@@ -8,6 +8,7 @@
 
 #import "RootViewController.h"
 #import "DemoTableViewController.h"
+#import "DemoCollectionViewController.h"
 
 @interface RootViewController ()
 
@@ -33,6 +34,11 @@
     
     // Collection View
     PKItem *collectionViewItem = [PKItem itemWithTitle:@"Collection View"];
+    [collectionViewItem setInteractionHandler:^(PKInteraction *interaction) {
+        
+        DemoCollectionViewController *viewController = [DemoCollectionViewController new];
+        [self.navigationController pushViewController:viewController animated:YES];
+    }];
     
     PKTableSection *patternSection = [PKTableSection tableSectionWithHeaderTitle:@"Patterns" items:@[tableViewItem, collectionViewItem] footerTitle:nil interactionHandler:nil];
     
