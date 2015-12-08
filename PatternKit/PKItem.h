@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "PKTableItemProtocol.h"
+#import "PKItemProtocol.h"
 
-@interface PKItem : NSObject <PKTableItemProtocol>
+@interface PKItem : NSObject <PKItemProtocol>
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *subtitle;

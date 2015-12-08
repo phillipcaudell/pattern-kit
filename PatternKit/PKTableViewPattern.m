@@ -92,14 +92,22 @@
 {
     id <PKTableSectionProtocol> section = (id <PKTableSectionProtocol>)[self sectionAtIndex:sectionIndex];
     
-    return section.sectionHeaderTitle;
+    if ([section respondsToSelector:@selector(sectionHeaderTitle)]) {
+        return [section sectionHeaderTitle];
+    } else {
+        return nil;
+    }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)sectionIndex
 {
     id <PKTableSectionProtocol> section = (id <PKTableSectionProtocol>)[self sectionAtIndex:sectionIndex];
     
-    return section.sectionFooterTitle;
+    if ([section respondsToSelector:@selector(sectionFooterTitle)]) {
+        return [section sectionFooterTitle];
+    } else {
+        return nil;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -122,9 +130,48 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    PKInteractionHandler interactionHandler = [self interactionHandlerForIndexPath:indexPath];
+    id <PKTableItemProtocol> item = (id <PKTableItemProtocol>)[self rowAtIndexPath:indexPath];
+
+    if (interactionHandler) {
+        
+        PKInteraction *interaction = [PKInteraction new];
+        interaction.indexPath = indexPath;
+        interaction.item = item;
+        interaction.view = [self.tableView cellForRowAtIndexPath:indexPath];
+        interaction.type = PKInteractionTypePrimary;
+        
+        interactionHandler(interaction);
+        
+    } else {
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    PKInteractionHandler interactionHandler = [self interactionHandlerForIndexPath:indexPath];
+    id <PKTableItemProtocol> item = (id <PKTableItemProtocol>)[self rowAtIndexPath:indexPath];
+    
+    if (interactionHandler) {
+        
+        PKInteraction *interaction = [PKInteraction new];
+        interaction.indexPath = indexPath;
+        interaction.item = item;
+        interaction.view = [self.tableView cellForRowAtIndexPath:indexPath];
+        interaction.type = PKInteractionTypeSecondary;
+        
+        interactionHandler(interaction);
+    }
+}
+
+#pragma mark - Helpers
+
+- (PKInteractionHandler)interactionHandlerForIndexPath:(NSIndexPath *)indexPath
+{
     id <PKTableItemProtocol> item = (id <PKTableItemProtocol>)[self rowAtIndexPath:indexPath];
     id <PKTableSectionProtocol> section = (id <PKTableSectionProtocol>)[self sectionAtIndex:indexPath.section];
-
+    
     PKInteractionHandler interactionHandler = nil;
     
     if ([section respondsToSelector:@selector(sectionInteractionHandler)]) {
@@ -138,21 +185,8 @@
         }
     }
     
-    if (interactionHandler) {
-        
-        PKInteraction *interaction = [PKInteraction new];
-        interaction.indexPath = indexPath;
-        interaction.item = item;
-        
-        interactionHandler(interaction);
-        
-    } else {
-        
-        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
-    }
+    return interactionHandler;
 }
-
-#pragma mark - Helpers
 
 - (CGFloat)automaticCellHeightForIndexPath:(NSIndexPath *)indexPath
 {

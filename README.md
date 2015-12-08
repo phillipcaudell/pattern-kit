@@ -22,14 +22,13 @@ Provides a flow for a user to select an image from their camera or library.
 - Import "PatternKit.h" where appropriate.
 
 ## Contributing 
-Contributions to PatternKit are welcomed and encouraged! 
+Contributions to PatternKit are welcomed and encouraged, though please take a second to read the following.
 
-### What makes a good pattern?
 As a general rule of thumb, a pattern should be a commonly repeated series of tasks to achieve something in UIKit. Patterns should also be versatile enough to be used across multiple applications and projects. 
 
 An example of a pattern is a user selecting a photo. You need to present options for  the user to select either the camera or photo library, check if the device supports it, present the picker interface, then return the image. This requires multiple callbacks which can add complexity to your view controllers, so instead we can silo it all into a single pattern.
 
-### Proposed Patterns
+## Proposed Patterns
 - Drag and Drop
 - Styles 
 - Layout
