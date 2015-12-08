@@ -92,14 +92,22 @@
 {
     id <PKTableSectionProtocol> section = (id <PKTableSectionProtocol>)[self sectionAtIndex:sectionIndex];
     
-    return section.sectionHeaderTitle;
+    if ([section respondsToSelector:@selector(sectionHeaderTitle)]) {
+        return [section sectionHeaderTitle];
+    } else {
+        return nil;
+    }
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)sectionIndex
 {
     id <PKTableSectionProtocol> section = (id <PKTableSectionProtocol>)[self sectionAtIndex:sectionIndex];
     
-    return section.sectionFooterTitle;
+    if ([section respondsToSelector:@selector(sectionFooterTitle)]) {
+        return [section sectionFooterTitle];
+    } else {
+        return nil;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath

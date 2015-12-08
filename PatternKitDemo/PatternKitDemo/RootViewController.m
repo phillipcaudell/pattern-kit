@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "DemoTableViewController.h"
 
 @interface RootViewController ()
 
@@ -22,20 +23,18 @@
 
     self.tableViewPattern = [[PKTableViewPattern alloc] initWithTableView:self.tableView];
     
+    // Table View
     PKItem *tableViewItem = [PKItem itemWithTitle:@"Table View" subtitle:nil image:nil];
     [tableViewItem setInteractionHandler:^(PKInteraction *interaction) {
         
-        NSLog(@"Item interaction handler! %@", interaction);
+        DemoTableViewController *viewController = [DemoTableViewController new];
+        [self.navigationController pushViewController:viewController animated:YES];
     }];
     
+    // Collection View
     PKItem *collectionViewItem = [PKItem itemWithTitle:@"Collection View"];
     
     PKTableSection *patternSection = [PKTableSection tableSectionWithHeaderTitle:@"Patterns" items:@[tableViewItem, collectionViewItem] footerTitle:nil interactionHandler:nil];
-    
-//    [patternSection setInteractionHandler:^(PKInteraction *interaction) {
-//        
-//        NSLog(@"Section interaction handler!");
-//    }];
     
     self.tableViewPattern.sections = @[patternSection];
 }
