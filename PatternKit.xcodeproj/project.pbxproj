@@ -28,6 +28,8 @@
 		13911C5E1C15A6A60035820C /* PKCollectionViewPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = 13911C4B1C15A6A60035820C /* PKCollectionViewPattern.m */; };
 		13911C5F1C15A6A60035820C /* PKInteraction.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C4C1C15A6A60035820C /* PKInteraction.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13AC599E1C15A72000696EA9 /* PKInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AC599D1C15A72000696EA9 /* PKInteraction.m */; };
+		13AC59A51C16E5C300696EA9 /* PKTableItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 13AC59A31C16E5C300696EA9 /* PKTableItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13AC59A61C16E5C300696EA9 /* PKTableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AC59A41C16E5C300696EA9 /* PKTableItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		13911C4B1C15A6A60035820C /* PKCollectionViewPattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKCollectionViewPattern.m; sourceTree = "<group>"; };
 		13911C4C1C15A6A60035820C /* PKInteraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKInteraction.h; sourceTree = "<group>"; };
 		13AC599D1C15A72000696EA9 /* PKInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKInteraction.m; sourceTree = "<group>"; };
+		13AC59A31C16E5C300696EA9 /* PKTableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKTableItem.h; sourceTree = "<group>"; };
+		13AC59A41C16E5C300696EA9 /* PKTableItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKTableItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				13911C451C15A6A60035820C /* PKTableViewPattern.m */,
 				13911C421C15A6A60035820C /* PKTableItemProtocol.h */,
 				13911C431C15A6A60035820C /* PKTableSectionProtocol.h */,
+				13AC59A31C16E5C300696EA9 /* PKTableItem.h */,
+				13AC59A41C16E5C300696EA9 /* PKTableItem.m */,
 				13911C461C15A6A60035820C /* PKTableSection.h */,
 				13911C471C15A6A60035820C /* PKTableSection.m */,
 				13911C481C15A6A60035820C /* PKTableViewCell.h */,
@@ -153,6 +159,7 @@
 				13911C5F1C15A6A60035820C /* PKInteraction.h in Headers */,
 				13911C011C15A3D90035820C /* PatternKit.h in Headers */,
 				13911C4E1C15A6A60035820C /* PKSectionProtocol.h in Headers */,
+				13AC59A51C16E5C300696EA9 /* PKTableItem.h in Headers */,
 				13911C591C15A6A60035820C /* PKTableSection.h in Headers */,
 				13911C511C15A6A60035820C /* PKItem.h in Headers */,
 				13911C5D1C15A6A60035820C /* PKCollectionViewPattern.h in Headers */,
@@ -232,6 +239,7 @@
 				13911C541C15A6A60035820C /* PKSection.m in Sources */,
 				13911C521C15A6A60035820C /* PKItem.m in Sources */,
 				13AC599E1C15A72000696EA9 /* PKInteraction.m in Sources */,
+				13AC59A61C16E5C300696EA9 /* PKTableItem.m in Sources */,
 				13911C5A1C15A6A60035820C /* PKTableSection.m in Sources */,
 				13911C581C15A6A60035820C /* PKTableViewPattern.m in Sources */,
 			);

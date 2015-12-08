@@ -43,7 +43,13 @@
     
     PKItem *concreateItem = [PKItem itemWithTitle:@"Concreate PKItem" subtitle:@"For basic UITableViewCell representation, you can simply use PKItem to represent a title, subtitle, and image." image:nil];
     
-    PKSection *introSection = [PKTableSection tableSectionWithHeaderTitle:@"Basic Usage" items:@[introItem, concreateItem] footerTitle:nil interactionHandler:nil];
+    PKTableItem *accessoryTableItem = [PKTableItem tableItemWithTitle:@"Lols"];
+    accessoryTableItem.subtitle = @"Update subtitle here too";
+    accessoryTableItem.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    
+    NSLog(@"ACCESS: %@", accessoryTableItem);
+    
+    PKSection *introSection = [PKTableSection tableSectionWithHeaderTitle:@"Basic Usage" items:@[introItem, concreateItem, accessoryTableItem] footerTitle:nil interactionHandler:nil];
     
     /*
      * Interactions

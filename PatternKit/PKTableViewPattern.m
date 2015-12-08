@@ -226,6 +226,8 @@
     }
     
     if ([item respondsToSelector:@selector(itemAccessoryType)]) {
+        
+        NSLog(@"I RESPOND!");
         cell.accessoryType = [item itemAccessoryType];
     }
     
