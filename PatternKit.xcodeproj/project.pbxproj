@@ -30,6 +30,8 @@
 		13AC599E1C15A72000696EA9 /* PKInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AC599D1C15A72000696EA9 /* PKInteraction.m */; };
 		13AC59A51C16E5C300696EA9 /* PKTableItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 13AC59A31C16E5C300696EA9 /* PKTableItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13AC59A61C16E5C300696EA9 /* PKTableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AC59A41C16E5C300696EA9 /* PKTableItem.m */; };
+		13AC59B31C16FCF900696EA9 /* PKCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 13AC59B11C16FCF900696EA9 /* PKCollectionViewCell.h */; };
+		13AC59B41C16FCF900696EA9 /* PKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AC59B21C16FCF900696EA9 /* PKCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		13AC599D1C15A72000696EA9 /* PKInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKInteraction.m; sourceTree = "<group>"; };
 		13AC59A31C16E5C300696EA9 /* PKTableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKTableItem.h; sourceTree = "<group>"; };
 		13AC59A41C16E5C300696EA9 /* PKTableItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKTableItem.m; sourceTree = "<group>"; };
+		13AC59B11C16FCF900696EA9 /* PKCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKCollectionViewCell.h; sourceTree = "<group>"; };
+		13AC59B21C16FCF900696EA9 /* PKCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,8 @@
 			children = (
 				13911C4A1C15A6A60035820C /* PKCollectionViewPattern.h */,
 				13911C4B1C15A6A60035820C /* PKCollectionViewPattern.m */,
+				13AC59B11C16FCF900696EA9 /* PKCollectionViewCell.h */,
+				13AC59B21C16FCF900696EA9 /* PKCollectionViewCell.m */,
 			);
 			name = "Collection View";
 			sourceTree = "<group>";
@@ -153,6 +159,7 @@
 				13911C561C15A6A60035820C /* PKTableSectionProtocol.h in Headers */,
 				13911C4F1C15A6A60035820C /* PKItemViewPattern.h in Headers */,
 				13911C551C15A6A60035820C /* PKTableItemProtocol.h in Headers */,
+				13AC59B31C16FCF900696EA9 /* PKCollectionViewCell.h in Headers */,
 				13911C571C15A6A60035820C /* PKTableViewPattern.h in Headers */,
 				13911C531C15A6A60035820C /* PKSection.h in Headers */,
 				13911C4D1C15A6A60035820C /* PKItemProtocol.h in Headers */,
@@ -242,6 +249,7 @@
 				13AC59A61C16E5C300696EA9 /* PKTableItem.m in Sources */,
 				13911C5A1C15A6A60035820C /* PKTableSection.m in Sources */,
 				13911C581C15A6A60035820C /* PKTableViewPattern.m in Sources */,
+				13AC59B41C16FCF900696EA9 /* PKCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

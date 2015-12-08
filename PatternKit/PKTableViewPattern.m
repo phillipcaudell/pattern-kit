@@ -239,21 +239,21 @@
     cell.textLabel.numberOfLines = 0;
     cell.detailTextLabel.numberOfLines = 0;
     
-    if ([item respondsToSelector:@selector(itemTitle)]) {
-        cell.textLabel.text = [item itemTitle];
-    }
+//    if ([item respondsToSelector:@selector(itemTitle)]) {
+//        cell.textLabel.text = [item itemTitle];
+//    }
+//    
+//    if ([item respondsToSelector:@selector(itemSubtitle)]) {
+//        cell.detailTextLabel.text = [item itemSubtitle];
+//    }
     
-    if ([item respondsToSelector:@selector(itemSubtitle)]) {
-        cell.detailTextLabel.text = [item itemSubtitle];
-    }
-    
-    if ([item respondsToSelector:@selector(itemImage)]) {
-        cell.imageView.image = [item itemImage];
-    }
-    
-    if ([item respondsToSelector:@selector(itemAccessoryType)]) {
-        cell.accessoryType = [item itemAccessoryType];
-    }
+//    if ([item respondsToSelector:@selector(itemImage)]) {
+//        cell.imageView.image = [item itemImage];
+//    }
+//    
+//    if ([item respondsToSelector:@selector(itemAccessoryType)]) {
+//        cell.accessoryType = [item itemAccessoryType];
+//    }
     
     // Allow item to configure cell
     if ([item respondsToSelector:@selector(configureItemCell:)]) {

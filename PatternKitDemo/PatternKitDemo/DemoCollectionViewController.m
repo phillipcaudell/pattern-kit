@@ -37,6 +37,8 @@
     _collectionViewPattern = [[PKCollectionViewPattern alloc] initWithCollectionView:self.collectionView];
 
     PKItem *testItem = [PKItem new];
+    testItem.title = @"Lol";
+    
     PKItem *testItem2 = [PKItem new];
 
     PKSection *section = [PKSection sectionWithItems:@[testItem, testItem2]];

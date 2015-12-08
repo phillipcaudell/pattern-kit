@@ -30,4 +30,13 @@
     return self.accessoryType;
 }
 
+- (void)configureItemCell:(id)cell
+{
+    [super configureItemCell:cell];
+    
+    if ([cell respondsToSelector:@selector(accessoryType)]) {
+        [cell setAccessoryType:self.accessoryType];
+    }
+}
+
 @end

@@ -45,4 +45,19 @@
     return self.interactionHandler;
 }
 
+- (void)configureItemCell:(id)cell
+{
+    if ([cell respondsToSelector:@selector(textLabel)]) {
+        [[cell textLabel] setText:self.title];
+    }
+    
+    if ([cell respondsToSelector:@selector(detailTextLabel)]) {
+        [[cell detailTextLabel] setText:self.subtitle];
+    }
+    
+    if ([cell respondsToSelector:@selector(imageView)]) {
+        [[cell imageView] setImage:self.image];
+    }
+}
+
 @end

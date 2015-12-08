@@ -9,6 +9,7 @@
 #import "PKCollectionViewPattern.h"
 #import "PKSectionProtocol.h"
 #import "PKItemProtocol.h"
+#import "PKCollectionViewCell.h"    
 
 @interface PKCollectionViewPattern () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
@@ -23,17 +24,49 @@
         _collectionView = collectionView;
         self.collectionView.delegate = self;
         self.collectionView.dataSource = self;
-        
-        [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
     }
     
     return self;
 }
 
+#pragma mark - Helpers
+
+- (Class)cellClassForIndexPath:(NSIndexPath *)indexPath
+{
+    id <PKItemProtocol> item = [self rowAtIndexPath:indexPath];
+    
+    Class cellClass = [PKCollectionViewCell class];
+    
+    if ([item respondsToSelector:@selector(itemCellClass)]) {
+        cellClass = [item itemCellClass];
+    }
+    
+    return cellClass;
+}
+
+- (void)registerCellClass:(Class)cellClass
+{
+    [super registerCellClass:cellClass];
+    
+    [self.collectionView registerClass:cellClass forCellWithReuseIdentifier:NSStringFromClass(cellClass)];
+}
+
+#pragma mark - Collection view delegate
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{    
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor redColor];
+{
+    Class cellClass = [self cellClassForIndexPath:indexPath];
+    
+    // Check to see if cell class is registered with table-view; if not, register it.
+    if (![self isCellClassRegistered:cellClass]) {
+        [self registerCellClass:cellClass];
+    }
+    
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(cellClass) forIndexPath:indexPath];
+    
+    cell.backgroundColor = [UIColor blueColor];
+    
+    [self configureCell:cell forIndexPath:indexPath];
     
     return cell;
 }
@@ -63,6 +96,15 @@
     } else {
         
         return CGSizeMake(44, 44);
+    }
+}
+
+- (void)configureCell:(UICollectionViewCell *)cell forIndexPath:(NSIndexPath *)indexPath
+{
+    id <PKItemProtocol> item = (id <PKItemProtocol>)[self rowAtIndexPath:indexPath];
+    
+    if ([item respondsToSelector:@selector(configureItemCell:)]) {
+        [item configureItemCell:cell];
     }
 }
 
