@@ -20,10 +20,11 @@
 
 - (instancetype)init
 {
-    UICollectionViewFlowLayout *collectionViewLayout = [UICollectionViewFlowLayout new];
+    _collectionViewPattern = [PKGridCollectionViewPattern new];
     
-    if (self = [super initWithCollectionViewLayout:collectionViewLayout]) {
+    if (self = [super initWithCollectionViewLayout:self.collectionViewPattern.collectionViewLayout]) {
         
+        self.collectionViewPattern.collectionView = self.collectionView;
         self.title = @"Collection View";
     }
     
@@ -34,16 +35,17 @@
 {
     [super viewDidLoad];
     
-    _collectionViewPattern = [[PKCollectionViewPattern alloc] initWithCollectionView:self.collectionView];
 
     PKItem *testItem = [PKItem new];
-    testItem.title = @"Lol";
-    
     PKItem *testItem2 = [PKItem new];
 
     PKSection *section = [PKSection sectionWithItems:@[testItem, testItem2]];
     
     self.collectionViewPattern.sections = @[section];
+    
+    [self.collectionView reloadData];
+    
+
 }
 
 @end

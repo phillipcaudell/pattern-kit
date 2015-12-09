@@ -17,16 +17,25 @@
 
 @implementation PKCollectionViewPattern
 
-- (instancetype)initWithCollectionView:(UICollectionView *)collectionView
+//- (instancetype)initWithCollectionView:(UICollectionView *)collectionView
+//{
+//    if (self = [super init]) {
+//        
+//        _collectionView = collectionView;
+//        self.collectionView.delegate = self;
+//        self.collectionView.dataSource = self;
+//    }
+//    
+//    return self;
+//}
+
+- (void)setCollectionView:(UICollectionView *)collectionView
 {
-    if (self = [super init]) {
-        
-        _collectionView = collectionView;
-        self.collectionView.delegate = self;
-        self.collectionView.dataSource = self;
-    }
-    
-    return self;
+    [self willChangeValueForKey:@"collectionView"];
+    _collectionView = collectionView;
+    collectionView.delegate = self;
+    collectionView.dataSource = self;
+    [self didChangeValueForKey:@"collectionView"];
 }
 
 #pragma mark - Helpers

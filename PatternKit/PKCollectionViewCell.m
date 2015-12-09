@@ -35,6 +35,7 @@
     [super layoutSubviews];
     
     self.textLabel.frame = self.bounds;
+    self.detailTextLabel.frame = self.bounds;
 }
 
 @end
