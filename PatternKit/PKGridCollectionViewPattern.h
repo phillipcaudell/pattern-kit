@@ -10,4 +10,7 @@
 
 @interface PKGridCollectionViewPattern : PKCollectionViewPattern
 
+@property (nonatomic, assign) NSInteger numberOfItemsPerRow;
+@property (nonatomic, assign) UIEdgeInsets itemSpacing;
+
 @end

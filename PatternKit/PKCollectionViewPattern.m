@@ -11,7 +11,7 @@
 #import "PKItemProtocol.h"
 #import "PKCollectionViewCell.h"    
 
-@interface PKCollectionViewPattern () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface PKCollectionViewPattern () <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @end
 
@@ -90,22 +90,6 @@
     id <PKSectionProtocol> section = (id <PKSectionProtocol>)[self sectionAtIndex:sectionIndex];
 
     return [[section sectionItems] count];
-}
-
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    id <PKItemProtocol> item = (id <PKItemProtocol>)[self rowAtIndexPath:indexPath];
-    
-    if ([item respondsToSelector:@selector(itemSizeWithConstraintSize:)]) {
-        
-        CGSize constaintSize = CGSizeMake(self.collectionView.bounds.size.width, MAXFLOAT);
-        
-        return [item itemSizeWithConstraintSize:constaintSize];
-        
-    } else {
-        
-        return CGSizeMake(44, 44);
-    }
 }
 
 - (void)configureCell:(UICollectionViewCell *)cell forIndexPath:(NSIndexPath *)indexPath

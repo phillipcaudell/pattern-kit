@@ -12,7 +12,7 @@
 
 @interface DemoCollectionViewController ()
 
-@property (readonly, strong) PKCollectionViewPattern *collectionViewPattern;
+@property (readonly, strong) PKGridCollectionViewPattern *collectionViewPattern;
 
 @end
 
@@ -25,6 +25,8 @@
     if (self = [super initWithCollectionViewLayout:self.collectionViewPattern.collectionViewLayout]) {
         
         self.collectionViewPattern.collectionView = self.collectionView;
+        self.collectionViewPattern.numberOfItemsPerRow = 3;
+        
         self.title = @"Collection View";
     }
     
@@ -35,11 +37,17 @@
 {
     [super viewDidLoad];
     
+    self.collectionView.backgroundColor = [UIColor whiteColor];
 
     PKItem *testItem = [PKItem new];
     PKItem *testItem2 = [PKItem new];
+    PKItem *testItem3 = [PKItem new];
+    PKItem *testItem4 = [PKItem new];
+    PKItem *testItem5 = [PKItem new];
+    PKItem *testItem6 = [PKItem new];
+    PKItem *testItem7 = [PKItem new];
 
-    PKSection *section = [PKSection sectionWithItems:@[testItem, testItem2]];
+    PKSection *section = [PKSection sectionWithItems:@[testItem, testItem2, testItem3, testItem4, testItem5, testItem6, testItem7]];
     
     self.collectionViewPattern.sections = @[section];
     
