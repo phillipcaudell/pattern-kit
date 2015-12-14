@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <PatternKit/PatternKit.h>
 
 @interface PKTableViewController : UITableViewController
+
+@property (nonatomic, strong) PKTableViewPattern *tableViewPattern;
 
 @end
