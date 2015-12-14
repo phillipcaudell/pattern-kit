@@ -30,6 +30,7 @@ FOUNDATION_EXPORT const unsigned char PatternKitVersionString[];
 #import <PatternKit/PKTableItem.h>
 #import <PatternKit/PKTableSection.h>
 #import <PatternKit/PKTableViewCell.h>
+#import <PatternKit/PKTableViewController.h>
 
 // Collection View
 #import <PatternKit/PKCollectionViewPattern.h>
