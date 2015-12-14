@@ -30,7 +30,7 @@
 		13AC599E1C15A72000696EA9 /* PKInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AC599D1C15A72000696EA9 /* PKInteraction.m */; };
 		13AC59A51C16E5C300696EA9 /* PKTableItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 13AC59A31C16E5C300696EA9 /* PKTableItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13AC59A61C16E5C300696EA9 /* PKTableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AC59A41C16E5C300696EA9 /* PKTableItem.m */; };
-		13B40C001C1EB74B0069C242 /* PKTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 13B40BFE1C1EB74B0069C242 /* PKTableViewController.h */; };
+		13B40C001C1EB74B0069C242 /* PKTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 13B40BFE1C1EB74B0069C242 /* PKTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13B40C011C1EB74B0069C242 /* PKTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B40BFF1C1EB74B0069C242 /* PKTableViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -157,9 +157,9 @@
 			files = (
 				13911C5B1C15A6A60035820C /* PKTableViewCell.h in Headers */,
 				13911C561C15A6A60035820C /* PKTableSectionProtocol.h in Headers */,
-				13B40C001C1EB74B0069C242 /* PKTableViewController.h in Headers */,
 				13911C4F1C15A6A60035820C /* PKItemViewPattern.h in Headers */,
 				13911C551C15A6A60035820C /* PKTableItemProtocol.h in Headers */,
+				13B40C001C1EB74B0069C242 /* PKTableViewController.h in Headers */,
 				13911C571C15A6A60035820C /* PKTableViewPattern.h in Headers */,
 				13911C531C15A6A60035820C /* PKSection.h in Headers */,
 				13911C4D1C15A6A60035820C /* PKItemProtocol.h in Headers */,
