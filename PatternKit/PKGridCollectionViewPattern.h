@@ -13,5 +13,6 @@
 @property (nonatomic, assign) NSInteger numberOfItemsPerRow;
 @property (nonatomic, assign) UIEdgeInsets itemSpacing;
 @property (nonatomic, assign) CGSize itemAspectRatio;
+@property (nonatomic, assign) UIEdgeInsets sectionInsets;
 
 @end

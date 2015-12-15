@@ -30,6 +30,8 @@
         self.numberOfItemsPerRow = 2;
         self.itemSpacing = UIEdgeInsetsMake(5, 5, 5, 5);
         self.itemAspectRatio = CGSizeMake(3, 5);
+        
+        self.sectionInsets = UIEdgeInsetsMake(5, 5, 5, 5);
     }
     
     return self;
@@ -47,13 +49,9 @@
         
     } else {
         
-//        NSInteger width = self.collectionView.bounds.size.width / self.numberOfItemsPerRow - ((self.itemSpacing.right + self.itemSpacing.left) / self.numberOfItemsPerRow);
-        
         CGFloat ratio = self.itemAspectRatio.width / self.itemAspectRatio.height;
-        
-        NSInteger width = self.collectionView.bounds.size.width / self.numberOfItemsPerRow;
+        NSInteger width = (self.collectionView.bounds.size.width / self.numberOfItemsPerRow) - (self.sectionInsets.left + self.sectionInsets.right);
         NSInteger height = width / ratio;
-
         
         return CGSizeMake(width, height);
     }
@@ -65,10 +63,10 @@
     return 0;
 }
 
-//- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-//{
-//    return UIEdgeInsetsMake(5, 5, 5, 5);
-//}
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
+    return self.sectionInsets;
+}
 
 // Vertical
 - (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
