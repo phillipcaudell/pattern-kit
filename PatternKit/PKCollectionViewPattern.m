@@ -99,4 +99,45 @@
     }
 }
 
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    PKInteractionHandler interactionHandler = [self interactionHandlerForIndexPath:indexPath];
+    id <PKItemProtocol> item = (id <PKItemProtocol>)[self rowAtIndexPath:indexPath];
+    
+    if (interactionHandler) {
+        
+        PKInteraction *interaction = [PKInteraction new];
+        interaction.indexPath = indexPath;
+        interaction.item = item;
+        interaction.view = [self.collectionView cellForItemAtIndexPath:indexPath];
+        interaction.type = PKInteractionTypePrimary;
+        
+        interactionHandler(interaction);
+        
+    } else {
+//        [self.collectionView deselectRowAtIndexPath:indexPath animated:YES];
+    }
+}
+
+- (PKInteractionHandler)interactionHandlerForIndexPath:(NSIndexPath *)indexPath
+{
+    id <PKItemProtocol> item = (id <PKItemProtocol>)[self rowAtIndexPath:indexPath];
+    id <PKSectionProtocol> section = (id <PKSectionProtocol>)[self sectionAtIndex:indexPath.section];
+    
+    PKInteractionHandler interactionHandler = nil;
+    
+    if ([section respondsToSelector:@selector(sectionInteractionHandler)]) {
+        interactionHandler = [section sectionInteractionHandler];
+    }
+    
+    if ([item respondsToSelector:@selector(itemInteractionHandler)]) {
+        
+        if ([item itemInteractionHandler]) {
+            interactionHandler = [item itemInteractionHandler];
+        }
+    }
+    
+    return interactionHandler;
+}
+
 @end
