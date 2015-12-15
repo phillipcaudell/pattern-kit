@@ -23,7 +23,6 @@
         _imageView = [UIImageView new];
         [self.contentView addSubview:self.imageView];
         
-        self.backgroundColor = [UIColor greenColor];
     }
     
     return self;

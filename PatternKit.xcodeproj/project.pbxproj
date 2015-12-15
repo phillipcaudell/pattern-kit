@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131DF0341C2019E6006A1605 /* PKTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 131DF0321C2019E6006A1605 /* PKTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		131DF0351C2019E6006A1605 /* PKTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 131DF0331C2019E6006A1605 /* PKTableViewController.m */; };
 		13509D1D1C18268900A9443C /* PKGridCollectionViewPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = 13509D1B1C18268900A9443C /* PKGridCollectionViewPattern.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13509D1E1C18268900A9443C /* PKGridCollectionViewPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = 13509D1C1C18268900A9443C /* PKGridCollectionViewPattern.m */; };
 		13911C011C15A3D90035820C /* PatternKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C001C15A3D90035820C /* PatternKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -37,6 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		131DF0321C2019E6006A1605 /* PKTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKTableViewController.h; sourceTree = "<group>"; };
+		131DF0331C2019E6006A1605 /* PKTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKTableViewController.m; sourceTree = "<group>"; };
 		13509D1B1C18268900A9443C /* PKGridCollectionViewPattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKGridCollectionViewPattern.h; sourceTree = "<group>"; };
 		13509D1C1C18268900A9443C /* PKGridCollectionViewPattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKGridCollectionViewPattern.m; sourceTree = "<group>"; };
 		13911BFD1C15A3D80035820C /* PatternKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PatternKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,6 +126,8 @@
 				13911C471C15A6A60035820C /* PKTableSection.m */,
 				13911C481C15A6A60035820C /* PKTableViewCell.h */,
 				13911C491C15A6A60035820C /* PKTableViewCell.m */,
+				131DF0321C2019E6006A1605 /* PKTableViewController.h */,
+				131DF0331C2019E6006A1605 /* PKTableViewController.m */,
 			);
 			name = "Table View";
 			sourceTree = "<group>";
@@ -175,6 +181,7 @@
 				13911C591C15A6A60035820C /* PKTableSection.h in Headers */,
 				13AC59B31C16FCF900696EA9 /* PKCollectionViewCell.h in Headers */,
 				13911C511C15A6A60035820C /* PKItem.h in Headers */,
+				131DF0341C2019E6006A1605 /* PKTableViewController.h in Headers */,
 				13509D1D1C18268900A9443C /* PKGridCollectionViewPattern.h in Headers */,
 				13911C5D1C15A6A60035820C /* PKCollectionViewPattern.h in Headers */,
 			);
@@ -255,6 +262,7 @@
 				13AC599E1C15A72000696EA9 /* PKInteraction.m in Sources */,
 				13AC59A61C16E5C300696EA9 /* PKTableItem.m in Sources */,
 				13509D1E1C18268900A9443C /* PKGridCollectionViewPattern.m in Sources */,
+				131DF0351C2019E6006A1605 /* PKTableViewController.m in Sources */,
 				13911C5A1C15A6A60035820C /* PKTableSection.m in Sources */,
 				13911C581C15A6A60035820C /* PKTableViewPattern.m in Sources */,
 				13AC59B41C16FCF900696EA9 /* PKCollectionViewCell.m in Sources */,

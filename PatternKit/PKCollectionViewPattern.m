@@ -72,9 +72,7 @@
     }
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(cellClass) forIndexPath:indexPath];
-    
-    cell.backgroundColor = [UIColor blueColor];
-    
+        
     [self configureCell:cell forIndexPath:indexPath];
     
     return cell;
