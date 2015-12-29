@@ -34,3 +34,5 @@ FOUNDATION_EXPORT const unsigned char PatternKitVersionString[];
 
 // Collection View
 #import <PatternKit/PKCollectionViewPattern.h>
+#import <PatternKit/PKGridCollectionViewPattern.h>
+#import <PatternKit/PKCollectionViewCell.h>

@@ -13,7 +13,7 @@
 @interface PKSection : NSObject <PKSectionProtocol>
 
 @property (nonatomic, strong) NSArray *items;
-@property (nonatomic, assign) PKInteractionHandler interactionHandler;
+@property (nonatomic, strong) PKInteractionHandler interactionHandler;
 
 + (instancetype)sectionWithItems:(NSArray *)items;
 - (void)setInteractionHandler:(PKInteractionHandler)interactionHandler;

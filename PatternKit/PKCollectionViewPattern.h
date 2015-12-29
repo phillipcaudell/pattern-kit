@@ -10,8 +10,9 @@
 
 @interface PKCollectionViewPattern : PKItemViewPattern
 
-@property (readonly, weak) UICollectionView *collectionView;
+@property (nonatomic, weak) UICollectionView *collectionView;
+@property (nonatomic, strong) UICollectionViewLayout *collectionViewLayout;
 
-- (instancetype)initWithCollectionView:(UICollectionView *)collectionView;
+//- (instancetype)initWithCollectionView:(UICollectionView *)collectionView;
 
 @end

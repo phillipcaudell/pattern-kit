@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13509D1D1C18268900A9443C /* PKGridCollectionViewPattern.h in Headers */ = {isa = PBXBuildFile; fileRef = 13509D1B1C18268900A9443C /* PKGridCollectionViewPattern.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13509D1E1C18268900A9443C /* PKGridCollectionViewPattern.m in Sources */ = {isa = PBXBuildFile; fileRef = 13509D1C1C18268900A9443C /* PKGridCollectionViewPattern.m */; };
 		13911C011C15A3D90035820C /* PatternKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C001C15A3D90035820C /* PatternKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13911C4D1C15A6A60035820C /* PKItemProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C3A1C15A6A60035820C /* PKItemProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13911C4E1C15A6A60035820C /* PKSectionProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 13911C3B1C15A6A60035820C /* PKSectionProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -30,11 +32,15 @@
 		13AC599E1C15A72000696EA9 /* PKInteraction.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AC599D1C15A72000696EA9 /* PKInteraction.m */; };
 		13AC59A51C16E5C300696EA9 /* PKTableItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 13AC59A31C16E5C300696EA9 /* PKTableItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13AC59A61C16E5C300696EA9 /* PKTableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AC59A41C16E5C300696EA9 /* PKTableItem.m */; };
+		13AC59B31C16FCF900696EA9 /* PKCollectionViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 13AC59B11C16FCF900696EA9 /* PKCollectionViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		13AC59B41C16FCF900696EA9 /* PKCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13AC59B21C16FCF900696EA9 /* PKCollectionViewCell.m */; };
 		13B40C001C1EB74B0069C242 /* PKTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 13B40BFE1C1EB74B0069C242 /* PKTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		13B40C011C1EB74B0069C242 /* PKTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B40BFF1C1EB74B0069C242 /* PKTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		13509D1B1C18268900A9443C /* PKGridCollectionViewPattern.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKGridCollectionViewPattern.h; sourceTree = "<group>"; };
+		13509D1C1C18268900A9443C /* PKGridCollectionViewPattern.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKGridCollectionViewPattern.m; sourceTree = "<group>"; };
 		13911BFD1C15A3D80035820C /* PatternKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PatternKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		13911C001C15A3D90035820C /* PatternKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PatternKit.h; sourceTree = "<group>"; };
 		13911C021C15A3D90035820C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +66,8 @@
 		13AC599D1C15A72000696EA9 /* PKInteraction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKInteraction.m; sourceTree = "<group>"; };
 		13AC59A31C16E5C300696EA9 /* PKTableItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKTableItem.h; sourceTree = "<group>"; };
 		13AC59A41C16E5C300696EA9 /* PKTableItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKTableItem.m; sourceTree = "<group>"; };
+		13AC59B11C16FCF900696EA9 /* PKCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKCollectionViewCell.h; sourceTree = "<group>"; };
+		13AC59B21C16FCF900696EA9 /* PKCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKCollectionViewCell.m; sourceTree = "<group>"; };
 		13B40BFE1C1EB74B0069C242 /* PKTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKTableViewController.h; sourceTree = "<group>"; };
 		13B40BFF1C1EB74B0069C242 /* PKTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PKTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -129,6 +137,10 @@
 			children = (
 				13911C4A1C15A6A60035820C /* PKCollectionViewPattern.h */,
 				13911C4B1C15A6A60035820C /* PKCollectionViewPattern.m */,
+				13509D1B1C18268900A9443C /* PKGridCollectionViewPattern.h */,
+				13509D1C1C18268900A9443C /* PKGridCollectionViewPattern.m */,
+				13AC59B11C16FCF900696EA9 /* PKCollectionViewCell.h */,
+				13AC59B21C16FCF900696EA9 /* PKCollectionViewCell.m */,
 			);
 			name = "Collection View";
 			sourceTree = "<group>";
@@ -168,7 +180,9 @@
 				13911C4E1C15A6A60035820C /* PKSectionProtocol.h in Headers */,
 				13AC59A51C16E5C300696EA9 /* PKTableItem.h in Headers */,
 				13911C591C15A6A60035820C /* PKTableSection.h in Headers */,
+				13AC59B31C16FCF900696EA9 /* PKCollectionViewCell.h in Headers */,
 				13911C511C15A6A60035820C /* PKItem.h in Headers */,
+				13509D1D1C18268900A9443C /* PKGridCollectionViewPattern.h in Headers */,
 				13911C5D1C15A6A60035820C /* PKCollectionViewPattern.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,8 +262,10 @@
 				13911C521C15A6A60035820C /* PKItem.m in Sources */,
 				13AC599E1C15A72000696EA9 /* PKInteraction.m in Sources */,
 				13AC59A61C16E5C300696EA9 /* PKTableItem.m in Sources */,
+				13509D1E1C18268900A9443C /* PKGridCollectionViewPattern.m in Sources */,
 				13911C5A1C15A6A60035820C /* PKTableSection.m in Sources */,
 				13911C581C15A6A60035820C /* PKTableViewPattern.m in Sources */,
+				13AC59B41C16FCF900696EA9 /* PKCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
