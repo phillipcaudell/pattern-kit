@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@import PatternKit;
 
+@interface RootViewController : UITableViewController
+
+@property (nonatomic, strong) PKTableViewPattern *tableViewPattern;
 
 @end
-
