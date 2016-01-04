@@ -126,6 +126,15 @@
     }
 }
 
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    if (self.showsSectionIndexTitles) {
+        return [self.sections valueForKeyPath:@"sectionHeaderTitle"];
+    } else {
+        return nil;
+    }
+}
+
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

@@ -15,5 +15,7 @@
 @property (nonatomic, strong) NSString *footerTitle;
 
 + (instancetype)tableSectionWithHeaderTitle:(NSString *)headerTitle items:(NSArray *)items footerTitle:(NSString *)footerTitle interactionHandler:(PKInteractionHandler)interactionHandler;
++ (NSArray *)sortedTableSectionsWithItems:(NSArray *)items keyPath:(NSString *)keyPath ascending:(BOOL)ascending interactionHandler:(PKInteractionHandler)interactionHandler;
+
 
 @end
